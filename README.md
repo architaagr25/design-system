@@ -1,18 +1,20 @@
 # Design System – React + Tailwind + Storybook
 
-## 📦 Stack
+##  Stack
 - Vite + React + TypeScript
 - TailwindCSS
 - Storybook
-- Vercel Deployment
+- Chromatic Deployment
 
-## 🧩 Components
+##  Components
 - Tag
 - Sidebar (collapsible, accessible)
 - ColorPalette
+- Tooltip
 
-## 🌐 Live Storybook
-[Vercel Link](https://your-vercel-url.vercel.app)
+##  Live Storybook
+
+ [View on Chromatic](https://6813ea0fdf59b264bf4ca37b-zmobkghmyh.chromatic.com/)
 
 ## 🛠 Features
 - Dark mode
