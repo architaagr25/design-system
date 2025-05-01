@@ -19,7 +19,7 @@ const colors: ColorSwatch[] = [
 
 const ColorPalette: React.FC = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4 dark:text-white">
       {colors.map((color) => (
         <div className="flex items-center gap-3" key={color.name}>
           <div

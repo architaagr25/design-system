@@ -18,7 +18,7 @@ const colorMap: Record<TagColor, string> = {
 
 const Tag: React.FC<TagProps> = ({ label, color = "primary", disabled }) => (
   <span
-    className={`inline-block px-3 py-1 text-sm font-medium rounded-full text-white ${colorMap[color]} ${
+    className={`inline-block px-3 py-1 text-sm font-medium rounded-full text-white dark:text-white ${colorMap[color]} ${
       disabled ? "opacity-50 cursor-not-allowed" : ""
     }`}
     aria-disabled={disabled}

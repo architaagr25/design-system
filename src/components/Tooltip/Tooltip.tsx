@@ -18,7 +18,7 @@ const Tooltip: React.FC<TooltipProps> = ({ text, position = "top", children }) =
   const tooltipId = useRef(`tooltip-${Math.random().toString(36).substring(2, 9)}`);
 
   return (
-    <div className="relative inline-block">
+    <div className=" dark:text-white relative inline-block">
       <div
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
@@ -35,7 +35,7 @@ const Tooltip: React.FC<TooltipProps> = ({ text, position = "top", children }) =
         <div
           id={tooltipId.current}
           role="tooltip"
-          className={`absolute z-10 px-3 py-1 text-sm text-white bg-neutral-900 rounded shadow-lg whitespace-nowrap ${positionClasses[position]}`}
+          className={`absolute z-10 px-3 py-1 text-sm text-white bg-neutral-900 rounded shadow-lg whitespace-nowrap dark:text-white ${positionClasses[position]}`}
         >
           {text}
         </div>
