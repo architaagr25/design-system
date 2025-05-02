@@ -5,7 +5,7 @@ const config: Config = {
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}', // include all component and story files
   ],
-  darkMode: 'class', // enables dark mode via class="dark"
+  darkMode: 'class',  // enables dark mode via class="dark"
   theme: {
     extend: {
       colors: {
