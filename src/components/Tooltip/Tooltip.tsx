@@ -18,7 +18,7 @@ const Tooltip: React.FC<TooltipProps> = ({ text, position = "top", children }) =
   const tooltipId = useRef(`tooltip-${Math.random().toString(36).substring(2, 9)}`);
 
   return (
-    <div className=" dark:text-white relative inline-block">
+    <div className=" bg-white dark:bg-neutral-900 text-black dark:text-white relative inline-block">
       <div
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}

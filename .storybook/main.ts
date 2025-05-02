@@ -8,7 +8,11 @@ const config: StorybookConfig = {
     options: {},
   },
   stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: ["@storybook/addon-essentials"],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-themes', 
+  ],
+  
   viteFinal: async (config) => {
     return {
       ...config,

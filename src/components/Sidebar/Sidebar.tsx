@@ -9,13 +9,13 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
 
   return (
     <aside
-      className={`h-screen p-4 bg-neutral-100 dark:bg-neutral-900 transition-all dark:text-white ${
+      className={`h-screen p-4 bg-white dark:bg-neutral-900 text-black dark:text-white ${
         collapsed ? "w-16" : "w-64"
       }`}
       role="navigation"
     >
       <button
-        className="text-sm mb-4 text-primary dark:text-white"
+        className="text-sm mb-4 text-primary bg-white dark:bg-neutral-900  dark:text-white"
         onClick={() => setCollapsed(!collapsed)}
         aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
       >
@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ items }) => {
           <li
             key={index}
             tabIndex={0}
-            className="hover:text-primary focus:outline-none text-neutral-900 dark:text-white"
+            className="hover:text-primary focus:outline-none bg-white dark:bg-neutral-900 text-black dark:text-white"
             aria-current={index === 0 ? "page" : undefined}
           >
             {collapsed ? label[0] : label}

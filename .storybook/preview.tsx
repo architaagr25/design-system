@@ -1,37 +1,25 @@
-// .storybook/preview.ts
-// .storybook/preview.tsx
 import type { Preview } from "@storybook/react";
-import React from "react";
+import { withThemeByClassName } from "@storybook/addon-themes";
 import "../src/index.css";
 
-// Decorator to apply dark mode class conditionally
+// Use addon-themes decorator for dark mode switching
 const preview: Preview = {
-  parameters: {},
   decorators: [
-    (Story, context) => {
-      const theme = context.globals.theme;
-      return (
-        <div className={theme === "dark" ? "dark" : ""}>
-          <div className="min-h-screen bg-white text-black dark:bg-neutral-900 dark:text-white p-6 transition-colors duration-300">
-            <Story />
-          </div>
-        </div>
-      );
-    },
-  ],
-  globalTypes: {
-    theme: {
-      name: "Theme",
-      description: "Global theme for components",
-      defaultValue: "light",
-      toolbar: {
-        icon: "circlehollow",
-        items: [
-          { value: "light", title: "Light" },
-          { value: "dark", title: "Dark" },
-        ],
-        showName: true,
+    withThemeByClassName({
+      themes: {
+        light: "light",
+        dark: "dark",
       },
+      defaultTheme: "light",
+    }),
+  ],
+  parameters: {
+    themes: {
+      default: "light",
+      list: [
+        { name: "light", class: "light", color: "#ffffff" },
+        { name: "dark", class: "dark", color: "#000000" },
+      ],
     },
   },
 };
